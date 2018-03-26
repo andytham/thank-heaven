@@ -44,7 +44,7 @@ class App extends Component {
     })
     axios.get('/data/brands')
     .then(brands => {
-      console.log("this is axios brands", brands)
+      // console.log("this is axios brands", brands)
       this.setState({
         brands: brands
       })
@@ -59,7 +59,7 @@ class App extends Component {
 
     axios.get('/data/reviews',{'headers':{}})
     .then(reviews => {
-      console.log(reviews.headers, 'THESE ARE HEADERS');
+      // console.log(reviews.headers, 'THESE ARE HEADERS');
       this.setState({
         reviews: reviews
       })

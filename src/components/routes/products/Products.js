@@ -25,7 +25,7 @@ class Products extends Component {
   //the array will be the list of items to paginate
   pushProduct(products, brands) {
     const productItems = products.map(product => {
-      console.log(product.brand_id, 'brand_id inside pushproduct');
+      // console.log(product.brand_id, 'brand_id inside pushproduct');
       return {id: product.id, name: product.name, description: product.description, image: product.image, brand_id: product.brand_id, brands: brands}
 
     })

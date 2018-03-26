@@ -19,7 +19,7 @@ import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_ERROR, AUTH_CHECK } from 'admin-on-rest';
                 return response.json();
             })
             .then(({ token }) => {
-            	console.log(token);
+            	// console.log(token);
                 localStorage.setItem('token', token);
             });
 
@@ -32,7 +32,7 @@ import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_ERROR, AUTH_CHECK } from 'admin-on-rest';
     }
     // called when the API returns an error
     if (type === AUTH_ERROR) {
-    	console.log("auth error")
+    	// console.log("auth error")
         const { status } = params;
         if (status === 401 || status === 403) {
             localStorage.removeItem('token');
@@ -42,7 +42,7 @@ import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_ERROR, AUTH_CHECK } from 'admin-on-rest';
     }
     // called when the user navigates to a new location
     if (type === AUTH_CHECK) {
-    	console.log("auth check")
+    	// console.log("auth check")
         return localStorage.getItem('token') ? Promise.resolve() : Promise.reject();
     }
     return Promise.reject('Unknown method');

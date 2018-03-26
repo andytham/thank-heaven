@@ -15,7 +15,7 @@ class Brands extends Component {
   }
   componentDidMount(){
     if(this.state.brands){
-      console.log('DATA WILL BE LOADED BE TRUE');
+      // console.log('DATA WILL BE LOADED BE TRUE');
       this.setState({
         dataLoaded: true
       })

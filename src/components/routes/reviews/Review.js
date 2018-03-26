@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Review extends Component {
   render() {
     const props = this.props.review;
-    console.log('this is props', props);
+    // console.log('this is props', props);
     return (
     <div>
       <div className="reviewImageDiv">

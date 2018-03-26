@@ -18,7 +18,7 @@ class FeaturedProducts extends Component {
         dataLoaded: true
       })
     }
-    console.log(this.props.products, 'HELLO PROPS');
+    // console.log(this.props.products, 'HELLO PROPS');
   }
   createProducts(products){
     return products.map((product) => {

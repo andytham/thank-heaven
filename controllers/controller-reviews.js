@@ -5,7 +5,7 @@ const reviewsController = {};
 reviewsController.index = (req, res) => {
   Review.findAll()
     .then(reviews => {
-      console.log(reviews);
+      // console.log(reviews);
       res.header("X-Total-Count", reviews.length);
       res.json(reviews);
     })
